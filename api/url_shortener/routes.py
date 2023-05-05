@@ -11,6 +11,7 @@ router.add_api_route(
 	endpoint=create_short_url,
 	methods=["POST"],
 	response_model=UrlOutputModel,
+	status_code=201,
 )
 
 router.add_api_route(

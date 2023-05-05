@@ -1,6 +1,11 @@
+import asyncio
+
 from asyncpg import Pool, create_pool
 
 from config import config
+
+
+shared_event_loop = asyncio.get_event_loop()
 
 
 class PoolConnection:
@@ -22,7 +27,10 @@ class AsyncPgConnection:
 
 	async def __call__(self, *args, **kwargs):
 		if not self.pool:
-			self.pool = await create_pool(dsn=self.pg_uri)
+			self.pool = await create_pool(
+				dsn=self.pg_uri,
+				loop=shared_event_loop,
+			)
 
 		return PoolConnection(self.pool)
 
