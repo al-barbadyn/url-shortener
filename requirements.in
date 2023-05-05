@@ -1,0 +1,10 @@
+# pip-compile requirements.in > requirements.txt
+
+fastapi==0.95.0
+sqlalchemy==2.0.8
+asyncpg==0.27.0
+uvicorn==0.21.1
+alembic==1.10.2
+psycopg2-binary==2.9.6
+python-dotenv==1.0.0
+validators==0.20.0
