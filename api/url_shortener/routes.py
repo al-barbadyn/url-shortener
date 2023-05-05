@@ -17,4 +17,5 @@ router.add_api_route(
 	"/",
 	endpoint=delete_short_url,
 	methods=["DELETE"],
+	status_code=204,
 )

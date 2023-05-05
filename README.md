@@ -26,11 +26,7 @@ curl --location --request DELETE 'http://127.0.0.1:8000/api/v1/url-shortener/' \
 }'
 
 Response:
-{
-    "status": "Success"
-}
-
-Or 404 if short url does not exist
+204 or 404 if short url does not exist
 ```
 
 ### Redirect
