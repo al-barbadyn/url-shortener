@@ -1,6 +1,6 @@
 # Url Shortener
 
-## API to create and delete shot urls
+## API to create and delete short urls
 ### Create (POST /api/v1/api/v1/url-shortener/ with url in body)
 ```
 curl --location --request POST 'http://127.0.0.1:8000/api/v1/url-shortener/' \
