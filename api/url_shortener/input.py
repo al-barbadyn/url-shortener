@@ -15,7 +15,3 @@ class UrlInputModel(BaseModel):
 
 class ShortUrlInputModel(BaseModel):
 	short_url: str = Body(..., embed=True)
-
-	@validator("short_url")
-	def parse_url(cls, v):
-		return v.split("/")[-1]
